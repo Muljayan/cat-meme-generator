@@ -9,22 +9,19 @@
 - As per the cataas documentation, `color` and `size` cannot be part of the query params
 
 
-### Functional Requirements
-- Use Cat as a Service (https://cataas.com)
-- Fetches an image of a cat with some custom text
-- Fetches an image of another cat with some more custom text 
-- Binds these images together into one image
-- Saves the resulting image as a file
+### Usage
 
-### Non Functional Requirements
-- Simplicity (less is more!)
-- Maintainability
-- Performance
+Clone this the project
+> git clone https://github.com/Muljayan/cat-meme-generator.git
 
-### Task
-- Refactor my application to improve, harden and modernize the code. 
-- Be prepared to verbally rationalize the changes you make. 
-- Wrapping it up in a package with a proper package.json would be a good start.
+Make sure the node version is 17+
+> node -v
 
+If you have installed nvm
+> nvm use
 
+Install the modules
+> npm install
 
+Run the app
+> npm start
