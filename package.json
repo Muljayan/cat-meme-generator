@@ -1,0 +1,26 @@
+{
+  "name": "cat-meme-maker",
+  "version": "1.0.0",
+  "description": "A cat meme generator to merge two images with text",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "tsc && node ./dist"
+  },
+  "author": "Muljayan",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.3.1",
+    "@typescript-eslint/eslint-plugin": "^5.60.0",
+    "@typescript-eslint/parser": "^5.60.0",
+    "eslint": "^8.43.0",
+    "eslint-config-xo": "^0.43.1",
+    "eslint-config-xo-typescript": "^0.57.0",
+    "typescript": "^5.1.3"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "sharp": "^0.32.1"
+  }
+}
