@@ -1,5 +1,6 @@
 
 import sharp from 'sharp';
+import configurations from '../configurations';
 
 type Options = {
 	height: number;
@@ -25,10 +26,10 @@ const mergeImages = async (buffers: Buffer[], {height, width}: Options) => {
 	)));
 
 	const outputFileName = `meme-${new Date().getTime()}.jpg`;
-	const outputPath = `./output/${outputFileName}`;
+	const outputPath = `./${configurations.outputFolder}/${outputFileName}`;
 
-	void output.toFile(outputPath);
-	console.log(`File saved in ${outputPath}`);
+	await output.toFile(outputPath);
+	console.log(`Files merged and saved. You can find your meme here : ${outputPath}`);
 };
 
 export default mergeImages;

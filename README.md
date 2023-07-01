@@ -20,8 +20,23 @@ Make sure the node version is 17+
 If you have installed nvm
 > nvm use
 
+If `nvm use` gives an error like `N/A: version "v18.16.1 -> N/A" is not yet installed.`
+> nvm install
+
 Install the modules
 > npm install
+
+
+Create a `.env` file in the root with the following values. The height, width and output folder can be changed to whatever you wish
+```
+BASE_URL = 'https://cataas.com'
+DEFAULT_HEIGHT = 200
+DEFAULT_WIDTH = 300
+OUTPUT_FOLDER = 'output'
+```
+
+Run the script to create an output folder
+> npm run create-folder
 
 Run the app
 > npm start
