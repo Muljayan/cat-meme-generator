@@ -14,7 +14,7 @@ export const prompt = async (question: string) => rl.question(question);
 type PromptValidationReturnType<T extends PromptTypes> = T extends PromptTypes.DIGITS ? number : string;
 
 export const promptWithValidation = async <T extends PromptTypes>(question: string, type?: T): Promise<PromptValidationReturnType<T>> => {
-	const inputValue = await rl.question(question);
+	const inputValue = (await rl.question(question)).trim();
 	switch (type) {
 		case PromptTypes.DIGITS:
 			if (isNumber(inputValue)) {
