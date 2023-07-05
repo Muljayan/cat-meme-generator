@@ -30,11 +30,13 @@ const main = async () => {
 
 		console.log('Please hold while we generate your meme...');
 
+		console.time('Time to execute: fetchAndHandleImages');
 		const images = await fetchAndHandleImages({
 			words: [firstWord, secondWord],
 			height,
 			width,
 		});
+		console.timeEnd('Time to execute: fetchAndHandleImages');
 		console.log('Merging images...');
 		await mergeImages(images, {
 			height,

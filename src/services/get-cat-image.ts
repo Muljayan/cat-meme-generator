@@ -12,7 +12,9 @@ const getCatImage = async ({
 	width,
 	height,
 }: Options) => {
+	console.time(`Time to execute api call for text: ${text}`);
 	const cat = await api.get<ArrayBuffer>(`/cat/says/${text}?width=${width}&height=${height}`, {responseType: 'arraybuffer'});
+	console.timeEnd(`Time to execute api call for text: ${text}`);
 	return Buffer.from(cat.data);
 };
 
